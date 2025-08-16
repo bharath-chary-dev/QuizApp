@@ -1,0 +1,413 @@
+.btn-skip {
+  background: #444;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0.5rem 0 0.5rem 0;
+  transition: background var(--transition), transform var(--transition);
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.btn-skip:hover, .btn-skip:focus {
+  background: #666;
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Animated timer bar for question */
+.timer-bar {
+  width: 100%;
+  height: 12px;
+  background: #222;
+  border-radius: 6px;
+  margin: 0.5rem 0 1.25rem 0;
+  overflow: hidden;
+/*
+  Theme Variables: Adjust these for easy theme changes or future color schemes
+  Add more variables for new accent colors or UI elements as needed
+*/
+:root {
+  --primary: #27ae60;
+  --background: #101415;
+  --foreground: #f7f7f7;
+  --secondary: #1a2326;
+  --accent: #00c896;
+  --danger: #e74c3c;
+  --warning: #f39c12;
+  --neutral: #2c3e50;
+  --neutral-light: #34495e;
+  --transition: 0.32s cubic-bezier(.4,0,.2,1);
+  --radius: 1.1rem;
+  --shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+[data-theme="light"] {
+  --background: #f7f7f7;
+  --foreground: #101415;
+  --secondary: #f4f4f4;
+  --neutral: #e0e0e0;
+  --neutral-light: #bfc9d1;
+}
+}
+.timer-bar-inner {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), #16a085 80%);
+  width: 100%;
+  transition: width 0.3s linear;
+}
+
+/* Answer highlighting */
+.option {
+  transition: background 0.3s, color 0.3s, border 0.3s;
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  transition: background var(--transition), color var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.08rem;
+  letter-spacing: 0.01em;
+}
+}
+.option.correct {
+  background: #43ea7a !important;
+  color: #111 !important;
+  border: 2px solid #27ae60;
+}
+.option.wrong {
+#app {
+  max-width: 500px;
+  width: 100%;
+  margin: 2.5rem auto 0 auto;
+  padding: 2.2rem 1.2rem 2.5rem 1.2rem;
+  box-sizing: border-box;
+}
+  background: #e74c3c !important;
+  color: #fff !important;
+  border: 2px solid #c0392b;
+}
+.option.neutral {
+  background: #2c3e50 !important;
+  color: #bfc9d1 !important;
+  border: 2px solid #34495e;
+}
+.option:disabled {
+  opacity: 0.85;
+  cursor: not-allowed;
+.card {
+  background: var(--secondary);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.2rem 2rem 2rem 2rem;
+  margin-bottom: 2.25rem;
+  transition: background var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.25rem;
+  /* Placeholder: Add card header/footer for future features */
+}
+}
+/* Loader spinner for loading state */
+.loader {
+  border: 4px solid #222;
+  border-top: 4px solid var(--primary);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* Quiz App Styles */
+.btn {
+  background: linear-gradient(90deg, var(--primary), var(--accent) 90%);
+  color: var(--foreground);
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.08rem;
+  cursor: pointer;
+  margin: 0.5rem 0 0.5rem 0;
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition), transform var(--transition);
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+:root {
+  --primary: #27ae60;
+  --background: #111;
+.btn:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+  --foreground: #fff;
+  --secondary: #222;
+  --accent: green;
+  --transition: 0.3s cubic-bezier(.4,0,.2,1);
+.btn:hover, .btn:focus {
+  background: linear-gradient(90deg, var(--accent), var(--primary) 90%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+}
+}
+[data-theme="light"] {
+  --background: #fff;
+  --foreground: #111;
+  --secondary: #f4f4f4;
+.btn-quit {
+  background: var(--danger) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(231,76,60,0.08);
+}
+}
+body {
+  background: var(--background);
+.btn-quit:hover, .btn-quit:focus {
+  background: #c0392b !important;
+}
+  color: var(--foreground);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+.option {
+  transition: background 0.32s, color 0.32s, border 0.32s, box-shadow 0.32s;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+  min-height: 100vh;
+  transition: background var(--transition), color var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+.option.correct {
+  background: #43ea7a !important;
+  color: #111 !important;
+  border: 2px solid #27ae60;
+  box-shadow: 0 2px 8px rgba(39,174,96,0.13);
+}
+  justify-content: flex-start;
+}
+
+#app {
+  max-width: 480px;
+.option.wrong {
+  background: #e74c3c !important;
+  color: #fff !important;
+  border: 2px solid #c0392b;
+  box-shadow: 0 2px 8px rgba(231,76,60,0.13);
+}
+  width: 100%;
+  margin: 2.5rem auto 0 auto;
+  padding: 2rem 1.5rem 2.5rem 1.5rem;
+  box-sizing: border-box;
+}
+.option.neutral {
+  background: var(--neutral) !important;
+  color: var(--neutral-light) !important;
+  border: 2px solid var(--neutral-light);
+}
+
+.card {
+  background: var(--secondary);
+  border-radius: 1.25rem;
+.option:disabled {
+  opacity: 0.85;
+  cursor: not-allowed;
+}
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  padding: 2.25rem 2rem 2rem 2rem;
+  margin-bottom: 2.25rem;
+  transition: background var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+.progress {
+  height: 10px;
+  background: var(--neutral);
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 1rem 0 1.25rem 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+  gap: 1.25rem;
+}
+
+.card h1, .card h2 {
+  margin: 0 0 0.75rem 0;
+  text-align: center;
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--accent) 80%);
+  width: 0%;
+  transition: width var(--transition);
+}
+}
+
+.btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+.timer-bar {
+  width: 100%;
+  height: 14px;
+  background: var(--neutral);
+  border-radius: 7px;
+  margin: 0.5rem 0 1.25rem 0;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+  cursor: pointer;
+  margin: 0.5rem 0 0.5rem 0;
+  transition: background var(--transition), transform var(--transition);
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+.timer-bar-inner {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--primary) 80%);
+  width: 100%;
+  transition: width 0.3s linear;
+}
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.btn:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+@media (max-width: 600px) {
+  #app { padding: 0.5rem 0.1rem 1.2rem 0.1rem; }
+  .card { padding: 1rem 0.5rem 1rem 0.5rem; }
+  .btn, .btn-quit, .btn-skip { width: 100%; font-size: 0.98rem; }
+  .toggle-switch { justify-content: center; }
+  .option { font-size: 0.98rem; }
+}
+
+/*
+  Placeholder: Add styles for future features (e.g., new question types, sound effect toggles, etc.)
+*/
+.btn:hover, .btn:focus {
+  background: var(--accent);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+  justify-content: flex-end;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+.switch input { display: none; }
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--secondary);
+  border-radius: 24px;
+  transition: background var(--transition);
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px; width: 20px;
+  left: 2px; bottom: 2px;
+  background: var(--primary);
+  border-radius: 50%;
+  transition: transform var(--transition);
+}
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+form label {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+form select, form input[type="text"] {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.4rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  background: var(--background);
+  color: var(--foreground);
+  transition: border var(--transition), background var(--transition), color var(--transition);
+}
+form select:focus, form input[type="text"]:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.progress {
+  height: 8px;
+  background: #333;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 1rem 0 1.25rem 0;
+}
+.progress-bar {
+  height: 100%;
+  background: var(--primary);
+  width: 0%;
+  transition: width var(--transition);
+}
+
+#leaderboard, .card ol {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0 0 0;
+}
+#leaderboard li, .card ol li {
+  margin-bottom: 0.4rem;
+  font-size: 1.05rem;
+  padding-left: 0.1rem;
+}
+
+.score-animate {
+  animation: scorePulse 0.6s cubic-bezier(.4,0,.2,1);
+}
+@keyframes scorePulse {
+  0% { color: var(--foreground); transform: scale(1); }
+  40% { color: var(--primary); transform: scale(1.25); }
+  100% { color: var(--foreground); transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+  #app { padding: 1rem 0.25rem 1.5rem 0.25rem; }
+  .card { padding: 1rem 0.5rem 1rem 0.5rem; }
+  .btn { width: 100%; font-size: 0.98rem; }
+  .toggle-switch { justify-content: center; }
+}
